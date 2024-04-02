@@ -1,0 +1,60 @@
+:root {
+  --bg: rgb(243, 243, 235);
+  --border: 1px solid black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+}
+
+.app .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 8px;
+  background-color: var(--bg);
+}
+
+.app .container .top {
+  flex: 2;
+  background-color: rgb(183, 240, 184);
+}
+
+.app .container .core {
+  display: flex;
+  flex: 8;
+  height: 0px; // <- trick is here, remove this and you're fucked
+  gap: 8px;
+  padding: 8px;
+  background-color: rgb(240, 196, 183);
+}
+
+.app .container .core .left {
+  width: 100%;
+  overflow-y: auto;
+  background-color: azure;
+}
+
+.app .container .core .right {
+  width: 100%;
+  background-color: bisque;
+}
+
+.app .container .core .left .item {
+  height: 90px;
+  margin: 2px;
+  background-color: rgb(183, 218, 240);
+}
